@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quel parti correspond à vos idées ? | Comparateur Politique 2022</title>
+    <meta name="description" content="Découvrez quel parti politique français correspond le mieux à vos convictions grâce à notre questionnaire interactif basé sur les programmes de l'élection présidentielle 2022.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🗳️ Quel parti politique correspond à vos idées ?</h1>
+            <p class="subtitle">Répondez à ces questions pour découvrir quel candidat de l'élection présidentielle 2022 est le plus proche de vos convictions.</p>
+            <div class="info-box">
+                <p><strong>📊 Basé sur les programmes officiels</strong> | 10 thèmes analysés | 12 candidats</p>
+            </div>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+        <p class="progress-text"><span id="questionNumber">1</span>/10</p>
+
+        <form id="questionnaire">
+            <!-- Question 1 : Économie -->
+            <div class="question" data-question="1">
+                <h2>💼 1. Quel modèle économique préférez-vous ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="economie" value="liberal" required>
+                        <span class="option-content">
+                            <strong>Libéral</strong>
+                            <small>Moins d'État, plus de marché libre</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="economie" value="social">
+                        <span class="option-content">
+                            <strong>Social</strong>
+                            <small>État protecteur, redistribution des richesses</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="economie" value="mixte">
+                        <span class="option-content">
+                            <strong>Mixte</strong>
+                            <small>Équilibre entre marché et protection sociale</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="economie" value="protectionniste">
+                        <span class="option-content">
+                            <strong>Protectionniste</strong>
+                            <small>Priorité à la production nationale</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 2 : Environnement -->
+            <div class="question" data-question="2" style="display: none;">
+                <h2>🌍 2. Quelle politique environnementale soutenez-vous ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="environnement" value="ecologiste" required>
+                        <span class="option-content">
+                            <strong>Écologiste</strong>
+                            <small>Priorité absolue à la transition écologique</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="environnement" value="modere">
+                        <span class="option-content">
+                            <strong>Modéré</strong>
+                            <small>Transition progressive en préservant l'économie</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="environnement" value="sceptique">
+                        <span class="option-content">
+                            <strong>Sceptique</strong>
+                            <small>Priorité à l'économie sur l'écologie</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 3 : Santé -->
+            <div class="question" data-question="3" style="display: none;">
+                <h2>🏥 3. Comment doit être géré le système de santé ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="sante" value="universelle" required>
+                        <span class="option-content">
+                            <strong>Universelle</strong>
+                            <small>Gratuite pour tous, 100% public</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="sante" value="mixte">
+                        <span class="option-content">
+                            <strong>Mixte</strong>
+                            <small>Système public renforcé + secteur privé</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="sante" value="privatisee">
+                        <span class="option-content">
+                            <strong>Privatisée</strong>
+                            <small>Assurances privées individuelles</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 4 : Sécurité -->
+            <div class="question" data-question="4" style="display: none;">
+                <h2>🚔 4. Quelle approche de la sécurité privilégiez-vous ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="securite" value="tres_ferme" required>
+                        <span class="option-content">
+                            <strong>Très ferme</strong>
+                            <small>Tolérance zéro, peines plus sévères</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="securite" value="ferme">
+                        <span class="option-content">
+                            <strong>Ferme</strong>
+                            <small>Renforcement des moyens policiers</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="securite" value="modere">
+                        <span class="option-content">
+                            <strong>Modéré</strong>
+                            <small>Équilibre répression et prévention</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="securite" value="prevention">
+                        <span class="option-content">
+                            <strong>Prévention</strong>
+                            <small>Traiter les causes sociales de la délinquance</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 5 : Europe -->
+            <div class="question" data-question="5" style="display: none;">
+                <h2>🇪🇺 5. Quelle est votre position sur l'Union Européenne ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="europe" value="pro_europeen" required>
+                        <span class="option-content">
+                            <strong>Pro-européen</strong>
+                            <small>Renforcer l'intégration européenne</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="europe" value="reforme_traites">
+                        <span class="option-content">
+                            <strong>Réformer les traités</strong>
+                            <small>Changer les règles européennes</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="europe" value="eurosceptique">
+                        <span class="option-content">
+                            <strong>Eurosceptique</strong>
+                            <small>Sortir de l'UE ou retrouver la souveraineté</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 6 : Immigration -->
+            <div class="question" data-question="6" style="display: none;">
+                <h2>🌐 6. Quelle politique d'immigration souhaitez-vous ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="immigration" value="tres_restrictif" required>
+                        <span class="option-content">
+                            <strong>Très restrictif</strong>
+                            <small>Immigration quasi-nulle ou remigration</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="immigration" value="restrictif">
+                        <span class="option-content">
+                            <strong>Restrictif</strong>
+                            <small>Quotas et contrôles stricts</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="immigration" value="modere">
+                        <span class="option-content">
+                            <strong>Modéré</strong>
+                            <small>Contrôle avec humanité</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="immigration" value="humaniste">
+                        <span class="option-content">
+                            <strong>Humaniste</strong>
+                            <small>Accueil et intégration facilités</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 7 : Fiscalité -->
+            <div class="question" data-question="7" style="display: none;">
+                <h2>💰 7. Quelle politique fiscale privilégiez-vous ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="fiscalite" value="baisse_impots" required>
+                        <span class="option-content">
+                            <strong>Baisse générale des impôts</strong>
+                            <small>Moins d'impôts pour tous</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="fiscalite" value="impot_progressif">
+                        <span class="option-content">
+                            <strong>Impôt progressif renforcé</strong>
+                            <small>Plus les riches paient, plus ils contribuent</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="fiscalite" value="taxation_richesse">
+                        <span class="option-content">
+                            <strong>Taxation des plus riches</strong>
+                            <small>Impôts élevés sur les hauts revenus et le capital</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 8 : Retraite -->
+            <div class="question" data-question="8" style="display: none;">
+                <h2>👴 8. Quelle réforme des retraites souhaitez-vous ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="retraite" value="retour_60_ans" required>
+                        <span class="option-content">
+                            <strong>Retour à 60 ans</strong>
+                            <small>Retraite à 60 ans pour tous</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="retraite" value="maintien_62_ans">
+                        <span class="option-content">
+                            <strong>Maintien à 62 ans</strong>
+                            <small>Conserver l'âge actuel</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="retraite" value="recul_age">
+                        <span class="option-content">
+                            <strong>Recul progressif</strong>
+                            <small>64-65 ans pour équilibrer le système</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 9 : Énergie -->
+            <div class="question" data-question="9" style="display: none;">
+                <h2>⚡ 9. Quelle politique énergétique préférez-vous ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="energie" value="pro_nucleaire" required>
+                        <span class="option-content">
+                            <strong>Pro-nucléaire</strong>
+                            <small>Développer le nucléaire pour l'indépendance</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="energie" value="mixte">
+                        <span class="option-content">
+                            <strong>Mix énergétique</strong>
+                            <small>Équilibre nucléaire et renouvelables</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="energie" value="sortie_nucleaire">
+                        <span class="option-content">
+                            <strong>Sortie du nucléaire</strong>
+                            <small>100% énergies renouvelables</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 10 : Éducation -->
+            <div class="question" data-question="10" style="display: none;">
+                <h2>📚 10. Quelle politique d'éducation souhaitez-vous ?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="education" value="gratuite_investissement" required>
+                        <span class="option-content">
+                            <strong>Investissement massif</strong>
+                            <small>Gratuité totale et augmentation des moyens</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="education" value="reformiste">
+                        <span class="option-content">
+                            <strong>Réformes et modernisation</strong>
+                            <small>Adapter l'école au monde moderne</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="education" value="traditionnelle">
+                        <span class="option-content">
+                            <strong>Retour aux fondamentaux</strong>
+                            <small>Lecture, écriture, calcul, autorité</small>
+                        </span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="education" value="merite">
+                        <span class="option-content">
+                            <strong>Méritocratie</strong>
+                            <small>Excellence et sélection</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button type="button" id="prevBtn" style="display: none;">← Précédent</button>
+                <button type="button" id="nextBtn">Suivant →</button>
+                <button type="submit" id="submitBtn" style="display: none;">Voir mes résultats 🎯</button>
+            </div>
+        </form>
+
+        <footer>
+            <p>⚖️ Outil d'information neutre basé sur les programmes officiels des candidats à la présidentielle 2022</p>
+            <p><small>Sources : Programme-candidats.interieur.gouv.fr, sites officiels des candidats</small></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

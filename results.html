@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vos Résultats | Comparateur Politique 2022</title>
+    <meta name="description" content="Découvrez les partis politiques qui correspondent le mieux à vos convictions.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .results-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .results-container {
+            padding: 40px 30px;
+        }
+
+        .parti-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parti-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .parti-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--primary-color);
+        }
+
+        .parti-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .parti-info h2 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .parti-info .parti-name {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .score-badge {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .score-percentage {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .score-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .mesures-phares {
+            margin: 20px 0;
+        }
+
+        .mesures-phares h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .mesures-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mesures-list li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .mesures-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .themes-accord {
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .themes-accord h4 {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .theme-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .theme-tag {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-dark);
+        }
+
+        .lien-programme {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .lien-programme:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn-secondary {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--border-color);
+        }
+
+        .share-section {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .medal {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .top-match {
+            border-color: #10b981;
+        }
+
+        .top-match::before {
+            background: #10b981;
+        }
+
+        @media (max-width: 768px) {
+            .parti-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .score-badge {
+                width: 100%;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="results-header">
+            <div class="medal">🎯</div>
+            <h1>Vos Résultats</h1>
+            <p class="subtitle">Voici les partis qui correspondent le mieux à vos convictions politiques</p>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+            <!-- Les résultats seront affichés ici par JavaScript -->
+        </div>
+
+        <div class="results-container">
+            <div class="share-section">
+                <h3>📤 Partagez vos résultats</h3>
+                <p>Discutez de vos résultats avec vos proches et comparez vos opinions politiques !</p>
+                <div class="action-buttons" style="justify-content: center; margin-top: 20px;">
+                    <button onclick="shareResults()" class="btn-secondary">Partager</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="index.html" class="btn-secondary">🔄 Refaire le test</a>
+                <button onclick="window.print()" class="btn-secondary">🖨️ Imprimer</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>⚖️ Résultats basés sur vos réponses et les programmes officiels des candidats</p>
+            <p><small>Ce test est un outil d'information. Il ne remplace pas une analyse approfondie des programmes.</small></p>
+        </footer>
+    </div>
+
+    <script>
+        // Récupérer les résultats depuis le sessionStorage
+        const resultats = JSON.parse(sessionStorage.getItem('resultats'));
+        const reponses = JSON.parse(sessionStorage.getItem('reponses'));
+
+        if (!resultats || !reponses) {
+            window.location.href = 'index.html';
+        }
+
+        // Afficher les résultats
+        const resultsContainer = document.getElementById('resultsContainer');
+
+        // Fonction pour obtenir le label d'un thème
+        function getThemeLabel(theme) {
+            const labels = {
+                'economie': '💼 Économie',
+                'environnement': '🌍 Environnement',
+                'sante': '🏥 Santé',
+                'securite': '🚔 Sécurité',
+                'europe': '🇪🇺 Europe',
+                'immigration': '🌐 Immigration',
+                'fiscalite': '💰 Fiscalité',
+                'retraite': '👴 Retraite',
+                'energie': '⚡ Énergie',
+                'education': '📚 Éducation'
+            };
+            return labels[theme] || theme;
+        }
+
+        // Afficher tous les candidats (limité aux 5 premiers pour la lisibilité)
+        resultats.slice(0, 5).forEach((parti, index) => {
+            const isTopMatch = index === 0;
+            const cardClass = isTopMatch ? 'parti-card top-match' : 'parti-card';
+
+            const mesuresHTML = parti.mesures_phares
+                ? `<div class="mesures-phares">
+                    <h3>📋 Mesures phares :</h3>
+                    <ul class="mesures-list">
+                        ${parti.mesures_phares.map(mesure => `<li>${mesure}</li>`).join('')}
+                    </ul>
+                   </div>`
+                : '';
+
+            const themesHTML = parti.themesAccord && parti.themesAccord.length > 0
+                ? `<div class="themes-accord">
+                    <h4>✅ Vous êtes d'accord sur ${parti.themesAccord.length} thème(s) :</h4>
+                    <div class="theme-tags">
+                        ${parti.themesAccord.map(theme => `<span class="theme-tag">${getThemeLabel(theme)}</span>`).join('')}
+                    </div>
+                   </div>`
+                : '';
+
+            const partiCard = `
+                <div class="${cardClass}">
+                    <div class="parti-header">
+                        <div class="parti-info">
+                            <h2>${isTopMatch ? '🏆 ' : `${index + 1}. `}${parti.nom}</h2>
+                            <p class="parti-name">${parti.parti}</p>
+                        </div>
+                        <div class="score-badge">
+                            <span class="score-percentage">${parti.pourcentage}%</span>
+                            <span class="score-label">de correspondance</span>
+                        </div>
+                    </div>
+                    ${mesuresHTML}
+                    ${themesHTML}
+                    ${parti.lien_programme ? `<a href="${parti.lien_programme}" target="_blank" class="lien-programme">📄 Consulter le programme complet →</a>` : ''}
+                </div>
+            `;
+
+            resultsContainer.innerHTML += partiCard;
+        });
+
+        // Fonction de partage
+        function shareResults() {
+            const topParti = resultats[0];
+            const shareText = `J'ai fait le test politique 2022 ! Mon meilleur match : ${topParti.nom} (${topParti.pourcentage}% de correspondance). Faites le test vous aussi !`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Mes résultats - Comparateur Politique 2022',
+                    text: shareText,
+                    url: window.location.origin + '/index.html'
+                }).catch(err => console.log('Erreur de partage:', err));
+            } else {
+                // Fallback : copier dans le presse-papiers
+                navigator.clipboard.writeText(shareText + ' ' + window.location.origin + '/index.html')
+                    .then(() => alert('Texte copié dans le presse-papiers !'))
+                    .catch(() => alert('Impossible de partager. Veuillez copier le lien manuellement.'));
+            }
+        }
+    </script>
+</body>
+</html>

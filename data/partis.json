@@ -1,0 +1,403 @@
+{
+  "partis": [
+    {
+      "nom": "Emmanuel Macron",
+      "parti": "La République En Marche",
+      "couleur": "#ffeb00",
+      "positions": {
+        "economie": "liberal",
+        "environnement": "modere",
+        "sante": "mixte",
+        "securite": "ferme",
+        "europe": "pro_europeen",
+        "education": "reformiste",
+        "immigration": "modere",
+        "fiscalite": "baisse_impots",
+        "retraite": "recul_age",
+        "energie": "pro_nucleaire"
+      },
+      "mesures_phares": [
+        "Poursuite de la baisse des impôts",
+        "Investissement dans le nucléaire",
+        "Report de l'âge de départ à la retraite à 65 ans",
+        "Renforcement de la souveraineté européenne"
+      ],
+      "lien_programme": "https://www.vie-publique.fr/discours/286126-emmanuel-macron-01042022-projet-presidentiel-2022-programme-electoral"
+    },
+    {
+      "nom": "Marine Le Pen",
+      "parti": "Rassemblement National",
+      "couleur": "#0d378a",
+      "positions": {
+        "economie": "protectionniste",
+        "environnement": "sceptique",
+        "sante": "universelle",
+        "securite": "tres_ferme",
+        "europe": "eurosceptique",
+        "education": "traditionnelle",
+        "immigration": "tres_restrictif",
+        "fiscalite": "baisse_impots_classes_moyennes",
+        "retraite": "maintien_60_62_ans",
+        "energie": "pro_nucleaire"
+      },
+      "mesures_phares": [
+        "Priorité nationale pour l'emploi et le logement",
+        "Référendum sur l'immigration",
+        "Suppression de la TVA sur les produits de première nécessité",
+        "Retraite à 60 ans pour ceux qui ont commencé tôt"
+      ],
+      "lien_programme": "https://www.lemonde.fr/politique/article/2022/02/14/le-programme-de-marine-le-pen-a-la-presidentielle-2022_6113605_823448.html"
+    },
+    {
+      "nom": "Jean-Luc Mélenchon",
+      "parti": "La France Insoumise",
+      "couleur": "#cc2443",
+      "positions": {
+        "economie": "social",
+        "environnement": "ecologiste",
+        "sante": "universelle",
+        "securite": "prevention",
+        "europe": "reforme_traites",
+        "education": "gratuite_investissement",
+        "immigration": "humaniste",
+        "fiscalite": "impot_progressif",
+        "retraite": "retour_60_ans",
+        "energie": "sortie_nucleaire"
+      },
+      "mesures_phares": [
+        "SMIC à 1400€ nets",
+        "Retraite à 60 ans",
+        "Planification écologique et règle verte",
+        "6ème République",
+        "Blocage des prix des produits de première nécessité"
+      ],
+      "lien_programme": "https://melenchon2022.fr/programme/"
+    },
+    {
+      "nom": "Éric Zemmour",
+      "parti": "Reconquête",
+      "couleur": "#1f2c54",
+      "positions": {
+        "economie": "liberal",
+        "environnement": "sceptique",
+        "sante": "mixte",
+        "securite": "tres_ferme",
+        "europe": "eurosceptique",
+        "education": "traditionnelle",
+        "immigration": "remigration",
+        "fiscalite": "baisse_impots",
+        "retraite": "recul_age",
+        "energie": "pro_nucleaire"
+      },
+      "mesures_phares": [
+        "Ministère de la Remigration",
+        "Baisse massive des impôts",
+        "Zéro immigration",
+        "Défense de l'identité française"
+      ],
+      "lien_programme": "https://programme.ericzemmour.fr/"
+    },
+    {
+      "nom": "Valérie Pécresse",
+      "parti": "Les Républicains",
+      "couleur": "#0066cc",
+      "positions": {
+        "economie": "liberal",
+        "environnement": "modere",
+        "sante": "mixte",
+        "securite": "ferme",
+        "europe": "pro_europeen_pragmatique",
+        "education": "merite",
+        "immigration": "restrictif",
+        "fiscalite": "baisse_impots_cotisations",
+        "retraite": "recul_age_65",
+        "energie": "pro_nucleaire"
+      },
+      "mesures_phares": [
+        "Suppression de 200 000 postes de fonctionnaires",
+        "Retraite à 65 ans",
+        "Baisse des cotisations salariales",
+        "Ouverture de 6 nouveaux réacteurs nucléaires (EPR)"
+      ],
+      "lien_programme": "https://valeriepecresse.fr/wp-content/uploads/2022/03/Programme-Valerie-Pecresse.pdf"
+    },
+    {
+      "nom": "Yannick Jadot",
+      "parti": "Europe Écologie Les Verts",
+      "couleur": "#00c000",
+      "positions": {
+        "economie": "social_ecologique",
+        "environnement": "ecologiste",
+        "sante": "universelle",
+        "securite": "prevention",
+        "europe": "pro_europeen",
+        "education": "gratuite_investissement",
+        "immigration": "humaniste",
+        "fiscalite": "taxation_pollution",
+        "retraite": "penibilite",
+        "energie": "sortie_nucleaire"
+      },
+      "mesures_phares": [
+        "Transition écologique massive",
+        "ISF climatique",
+        "100% d'énergies renouvelables en 2050",
+        "Arrêt progressif du nucléaire"
+      ],
+      "lien_programme": "https://www.jadot2022.fr/"
+    },
+    {
+      "nom": "Anne Hidalgo",
+      "parti": "Parti Socialiste",
+      "couleur": "#ff8080",
+      "positions": {
+        "economie": "social",
+        "environnement": "ecologiste",
+        "sante": "universelle",
+        "securite": "prevention",
+        "europe": "pro_europeen",
+        "education": "gratuite_investissement",
+        "immigration": "humaniste",
+        "fiscalite": "impot_progressif",
+        "retraite": "maintien_62_ans",
+        "energie": "mixte"
+      },
+      "mesures_phares": [
+        "Doublement du budget de l'éducation",
+        "SMIC à 1300€ nets",
+        "Zéro SDF",
+        "Revalorisation des métiers féminisés"
+      ],
+      "lien_programme": "https://www.2022hidalgo.fr/"
+    },
+    {
+      "nom": "Fabien Roussel",
+      "parti": "Parti Communiste Français",
+      "couleur": "#dd0000",
+      "positions": {
+        "economie": "social",
+        "environnement": "ecologiste_pragmatique",
+        "sante": "universelle",
+        "securite": "prevention",
+        "europe": "reforme_traites",
+        "education": "gratuite_investissement",
+        "immigration": "humaniste",
+        "fiscalite": "taxation_richesse",
+        "retraite": "retour_60_ans",
+        "energie": "pro_nucleaire_renouvelable"
+      },
+      "mesures_phares": [
+        "SMIC à 1500€ nets",
+        "Retraite à 60 ans",
+        "Nationalisation des autoroutes",
+        "Relance du nucléaire et des renouvelables"
+      ],
+      "lien_programme": "https://www.fabienroussel2022.fr/"
+    },
+    {
+      "nom": "Jean Lassalle",
+      "parti": "Résistons !",
+      "couleur": "#ffaa00",
+      "positions": {
+        "economie": "social_ruralite",
+        "environnement": "modere",
+        "sante": "universelle",
+        "securite": "modere",
+        "europe": "eurosceptique_pragmatique",
+        "education": "ruralite",
+        "immigration": "modere",
+        "fiscalite": "soutien_territoires",
+        "retraite": "maintien_62_ans",
+        "energie": "mixte"
+      },
+      "mesures_phares": [
+        "Défense des territoires ruraux",
+        "Vote blanc reconnu",
+        "Référendum d'initiative citoyenne",
+        "Aménagement du territoire"
+      ],
+      "lien_programme": "https://www.jeanlassalle.fr/"
+    },
+    {
+      "nom": "Nicolas Dupont-Aignan",
+      "parti": "Debout la France",
+      "couleur": "#003399",
+      "positions": {
+        "economie": "protectionniste",
+        "environnement": "modere",
+        "sante": "universelle",
+        "securite": "ferme",
+        "europe": "eurosceptique",
+        "education": "traditionnelle",
+        "immigration": "restrictif",
+        "fiscalite": "baisse_impots",
+        "retraite": "maintien_62_ans",
+        "energie": "pro_nucleaire"
+      },
+      "mesures_phares": [
+        "Sortie de l'euro",
+        "Protectionnisme intelligent",
+        "Priorité nationale",
+        "Renforcement des services publics"
+      ],
+      "lien_programme": "https://www.nda-2022.fr/"
+    },
+    {
+      "nom": "Nathalie Arthaud",
+      "parti": "Lutte Ouvrière",
+      "couleur": "#bb0000",
+      "positions": {
+        "economie": "communiste",
+        "environnement": "social",
+        "sante": "universelle",
+        "securite": "sociale",
+        "europe": "internationaliste",
+        "education": "gratuite_investissement",
+        "immigration": "ouverture_frontieres",
+        "fiscalite": "taxation_capital",
+        "retraite": "retour_60_ans",
+        "energie": "public"
+      },
+      "mesures_phares": [
+        "Contrôle ouvrier sur l'économie",
+        "Interdiction des licenciements",
+        "Partage du travail",
+        "Augmentation massive des salaires"
+      ],
+      "lien_programme": "https://www.lutte-ouvriere-2022.org/"
+    },
+    {
+      "nom": "Philippe Poutou",
+      "parti": "Nouveau Parti Anticapitaliste",
+      "couleur": "#bb0000",
+      "positions": {
+        "economie": "anticapitaliste",
+        "environnement": "ecologiste",
+        "sante": "universelle",
+        "securite": "sociale",
+        "europe": "anticapitaliste",
+        "education": "gratuite_investissement",
+        "immigration": "ouverture_frontieres",
+        "fiscalite": "taxation_richesse",
+        "retraite": "retour_60_ans",
+        "energie": "sortie_nucleaire"
+      },
+      "mesures_phares": [
+        "Interdiction des licenciements",
+        "SMIC à 1800€",
+        "Gratuité des transports",
+        "Lutte contre le changement climatique"
+      ],
+      "lien_programme": "https://poutou2022.org/"
+    }
+  ],
+  "themes": {
+    "economie": {
+      "label": "Modèle économique",
+      "options": {
+        "liberal": "Libéral (moins d'État, plus de marché)",
+        "social": "Social (État protecteur, redistribution)",
+        "mixte": "Mixte (équilibre entre marché et protection)",
+        "protectionniste": "Protectionniste (priorité nationale)",
+        "communiste": "Communiste (contrôle ouvrier)",
+        "anticapitaliste": "Anticapitaliste",
+        "social_ecologique": "Social et écologique",
+        "social_ruralite": "Social avec focus ruralité"
+      }
+    },
+    "environnement": {
+      "label": "Politique environnementale",
+      "options": {
+        "ecologiste": "Écologiste (priorité absolue à la transition)",
+        "modere": "Modéré (transition progressive)",
+        "sceptique": "Sceptique (priorité à l'économie)",
+        "ecologiste_pragmatique": "Écologiste pragmatique",
+        "social": "Approche sociale de l'écologie"
+      }
+    },
+    "sante": {
+      "label": "Système de santé",
+      "options": {
+        "universelle": "Universelle (gratuite pour tous)",
+        "mixte": "Mixte (public + privé)",
+        "privatisee": "Privatisée (assurances privées)"
+      }
+    },
+    "securite": {
+      "label": "Politique de sécurité",
+      "options": {
+        "tres_ferme": "Très ferme (tolérance zéro)",
+        "ferme": "Ferme (renforcement des moyens)",
+        "modere": "Modéré (équilibre répression/prévention)",
+        "prevention": "Prévention (causes sociales)",
+        "sociale": "Approche sociale"
+      }
+    },
+    "europe": {
+      "label": "Position sur l'Europe",
+      "options": {
+        "pro_europeen": "Pro-européen (intégration renforcée)",
+        "pro_europeen_pragmatique": "Pro-européen pragmatique",
+        "eurosceptique": "Eurosceptique (sortie ou renégociation)",
+        "eurosceptique_pragmatique": "Eurosceptique pragmatique",
+        "reforme_traites": "Réforme des traités",
+        "internationaliste": "Internationaliste",
+        "anticapitaliste": "Anti-UE capitaliste"
+      }
+    },
+    "immigration": {
+      "label": "Politique d'immigration",
+      "options": {
+        "tres_restrictif": "Très restrictif (zéro immigration)",
+        "restrictif": "Restrictif (quotas stricts)",
+        "modere": "Modéré (contrôle avec humanité)",
+        "humaniste": "Humaniste (accueil et intégration)",
+        "ouverture_frontieres": "Ouverture des frontières",
+        "remigration": "Remigration"
+      }
+    },
+    "fiscalite": {
+      "label": "Politique fiscale",
+      "options": {
+        "baisse_impots": "Baisse des impôts",
+        "baisse_impots_classes_moyennes": "Baisse pour les classes moyennes",
+        "baisse_impots_cotisations": "Baisse impôts et cotisations",
+        "impot_progressif": "Impôt progressif renforcé",
+        "taxation_richesse": "Taxation des plus riches",
+        "taxation_pollution": "Taxation de la pollution",
+        "taxation_capital": "Taxation du capital",
+        "soutien_territoires": "Soutien aux territoires"
+      }
+    },
+    "retraite": {
+      "label": "Réforme des retraites",
+      "options": {
+        "retour_60_ans": "Retour à 60 ans",
+        "maintien_60_62_ans": "Maintien 60-62 ans selon carrière",
+        "maintien_62_ans": "Maintien à 62 ans",
+        "recul_age": "Recul de l'âge (64-65 ans)",
+        "recul_age_65": "Recul à 65 ans",
+        "penibilite": "Prise en compte pénibilité"
+      }
+    },
+    "energie": {
+      "label": "Politique énergétique",
+      "options": {
+        "pro_nucleaire": "Pro-nucléaire",
+        "pro_nucleaire_renouvelable": "Nucléaire + renouvelables",
+        "sortie_nucleaire": "Sortie du nucléaire",
+        "mixte": "Mix énergétique équilibré",
+        "public": "Énergie publique"
+      }
+    },
+    "education": {
+      "label": "Politique d'éducation",
+      "options": {
+        "gratuite_investissement": "Gratuite avec investissement massif",
+        "reformiste": "Réformes et modernisation",
+        "traditionnelle": "Retour aux fondamentaux",
+        "merite": "Méritocratie et excellence",
+        "ruralite": "Focus sur les territoires ruraux"
+      }
+    }
+  }
+}
